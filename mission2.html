@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Honeybook | Ninja Mission 2</title> 
+<meta name="viewport" content="width=device-width">
+  	<!----------------------------------------------------------
+         reset.css will reset all settings to ensure cross browser consistencies 
+         text.css will manage all font related properties including icon fonts
+         foundation.css will manage grid properties
+         style.css will take care of all style properties on the site
+    ------------------------------------------------------------->
+        <link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/text.css" /> 
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/style.css" />   
+</head>
+<body>
+
+    <!-- Top header navigations, texture color overlay failed to work  
+    <div class="top_header row texture-color"> -->
+   	<div class="top_header texture-color row"> 
+   
+        <!-- Original feed icon in .png have been replaced by text icon for better control of styling-->
+    	<div class="top_left_subscribe small-3 large-3 columns">  
+       		 <span class="icon-feed"> </span><a href="#">Subscribe</a> by <a href=#>RSS</a> or <a href="#">Email</a>
+        </div>
+        <div class="top_right_link small-9 large-9 columns">
+         	<ul>
+				<li><a href="#">Dropdowns</a></li> |
+				<li><a href="#">Elements</a></li> |
+				<li><a href="#">Full Width</a></li> |
+            	<li><a href="#">Archives</a></li> |
+            	<li><a href="#">Contact</a></li> |
+				<li><a href="#">Buy Theme</a></li>
+			</ul> 
+        </div>
+    </div>    
+    
+    
+    
+    <!-- Content related elements will fall here  -->
+    <div class="content_container row"> 
+  
+        <!-- Honeybook Logo goes here, we will add animation using CSS transitions-->
+    	<div class="honeybook_logo small-12 large-12 columns">  
+       		 <img src="img/logo.gif" >  <br />
+        </div> 
+    
+        <!-- Site main navigation bar , uses flexbox for fluid resizing of menus-->
+        <div class='horizontal_bar small-12 large-12 columns'>
+			<a href="#">Home</a>
+            <a href="#">Culture</a>
+            <a href="#">Lifestyle</a>
+            <a href="#">World News</a>
+            <a href="#">Sport</a>
+            <a href="#">Travel</a>
+            <a href="#">Health</a>
+            <a href="#">Finance</a>
+            <a href="#">Weird</a>
+            <a href="#">Celebrity</a>
+         </div>
+        
+         <!-- Site bread crumbs navigation, to break and transform into line of text at lower res TBC -->
+         <div class='breadcrumb small-7 large-7 columns'>
+			<span class="highlight_crumb">	
+            	<a href="#">Home</a> >
+            	<a href="#">World News</a> >
+            	<a href="#">Fly Fishers Serving as Transport for Noxious Invaders</a>
+            </span>
+         </div>
+         <!-- Site search on content area -->
+
+         <div class='main_search small-5 large-5 columns'>
+             <input type="text" placeholder="to search, type and hit enter"  /> 
+         </div>
+
+        
+         <!-- Article Title-->  
+         <div class='article_title small-8 large-8 columns'>
+        	<h4>Fly Fishers Serving as Transports for Noxious Little Invaders</h4>
+            
+            	<!-- Horizontal rule image bar --> 
+                <div class="horizontal_bar_"></div>
+            
+            	<!-- Article author & category details -->
+               <div class="entry_cat">
+               		Written by <a href="#">Orman</a> on <a href="#">23 Oct 2010</a> in <a href="#">Category one</a>, 
+               		<a href="#">Category Two</a> | <a href="#">27 comments</a> 
+               </div>   
+         </div>
+ 
+         <!-- RSS Subscribers-->
+         <div class='rss_subscribe small-2 large-2 columns clearfix'>
+            	<img src="img/rss_thumb1.gif"> 
+            	<h3>436</h3><h5>Subscribers</h5>
+         </div> 
+         <!-- Twitter Followers-->
+         <div class='twitter_follow small-2 large-2 columns'>
+             <img src="img/tweet_thumb1.gif"><h3>347</h3> <h5>Followers</h5>
+         </div> 
+          
+         <!-- Article Content-->  
+         <div class='cover_image small-8 large-8 columns'>     
+         	 <img src="img/macaron.jpg">
+    	 </div>
+         
+         <!-- Image column 1 on the right-->  
+         <div class='column1 small-2 large-2 columns'>     
+            <img src="img/121x124.jpg">
+             <img src="img/121x124.jpg">
+    	 </div>
+         
+          <!-- Image column 2 on the right-->  
+         <div class='column2 small-2 large-2 columns'>  
+            <img src="img/121x124.jpg"> 
+             <img src="img/121x124.jpg">
+    	 </div>
+         
+         <!-- Article Content-->  
+         <div class='main_entry small-8 large-8 columns'>     
+         	 Lorem ipsum dolor sit amet, <a href="#">consectetu</a>r adipiscing elit. Cras vehicula massa turpis, nec 
+             elementum risus mollis eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante
+             ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;<p> </p>
+    	 
+         	 <img src="img/IMG_5425.JPG">
+             
+             Phasellus fermentum lorem libero, varius ornare est <a href="#">dictum</a> at. Nullam porttitor eros 
+             non congue laoreet. Sed eu vulputate nibh. Donec semper elementum elit at posuere.
+             Sed luctus magna vel commodo ornare.  <p></p>
+             
+             Integer eleifend commodo enim, vitae cursus turpis placerat sit amet. Fusce id bibendum orci. Quisque sit amet 
+             tristique metus, vel adipiscing nisl. Nulla ut elit sit amet mauris <a href="#">sodales</a> eleifend id et velit.
+             Mauris eu pulvinar dolor. Sed risus nisl, gravida vitae tempor nec, aliquet. <p></p>
+         
+         	<blockquote> Aenean vitae aliquet mi, eget tempor metus. Vivamus suscipit sit amet elit sed mattis. Pellentesque 
+            magna libero, interdum non sagittis eu, dapibus ut orci. Nullam et volutpat mauris, sit amet pulvinar velit. 
+            Quisque eget risus id nisl pretium tristique vitae feugiat leo. <cite>Dror Shimoni</cite></blockquote>
+        
+        	 <div class="two_columns">Proin malesuada sapien id magna consectetur, porta aliquet massa placerat. Quisque ut 
+             ante consectetur, sagittis nisi ac, pharetra justo. Donec adipiscing, est nec varius suscipit, nibh neque 
+             consectetur nulla, at tempus sem nisi eget tellus. Nullam vel turpis nulla. Pellentesque urna lacus, dignissim 
+             nec hendrerit cursus, aliquam consequat neque. Vestibulum tempor odio justo, nec placerat nisl adipiscing quis. 	
+             Nullam aliquam facilisis sapien a scelerisque. Cras fermentum pretium justo, a pulvinar nisi. Mauris in tristique		
+             quam. Proin in tempor tortor. Sed tempor orci at diam elementum, ut consequat enim posuere. In hac habitasse 
+             platea dictumst. Morbi pharetra lacus et porttitor malesuada. Nam ac orci non velit sollicitudin bibendum quis 
+             sed elit. </div> <p> </p>
+        
+        	 <div class="three_columns">Proin malesuada sapien id magna consectetur, porta aliquet massa placerat. Quisque ut 
+             ante consectetur, sagittis nisi ac, pharetra justo. Donec adipiscing, est nec varius suscipit, nibh neque 
+             consectetur nulla, at tempus sem nisi eget tellus. Nullam vel turpis nulla. Pellentesque urna lacus, dignissim 
+             nec hendrerit cursus, aliquam consequat neque. Vestibulum tempor odio justo, nec placerat nisl adipiscing quis. 	
+             Nullam aliquam facilisis sapien a scelerisque. Cras fermentum pretium justo, a pulvinar nisi. Mauris in tristique		
+             quam. Proin in tempor tortor. Sed tempor orci at diam elementum, ut consequat enim posuere. In hac habitasse 
+             platea dictumst. Morbi pharetra lacus et porttitor malesuada. Nam ac orci non velit sollicitudin bibendum quis 
+             sed elit. </div>
+                    
+         </div>
+         
+         <div class='whitespace small-4 large-4 columns'>     
+         <!-- For future usage e.g. advertisement space-->
+         </div>
+         
+         
+         
+         <!-- Author Information -->
+         <div class="author small-8 large-8 columns">
+           <h5>About the Author</h5> 
+           <img src="img/author.jpg">
+           a, at tempus sem nisi eget tellus. Nullam vel turpis nulla. Pellentesque urna lacus, dignissim nec hendrerit 
+           cursus, aliquam consequat neque. Vestibulum tempor odio justo, nec placerat nisl adipiscing quis. Nullam aliquam 
+           facilisis sapien a scelerisque.  
+         </div>
+         <div class='whitespace small-4 large-4 columns'>     
+         	<!-- For future usage e.g. advertisement space-->
+         </div>
+          
+         <!-- More about related posts-->
+         <div class="related small-8 large-8 columns">
+            <h3>Related Post</h3>    
+            <table width='100%'> 
+              <tr>
+              	<td>
+             		<div class="related_post">
+               			 <img src="img/related_post.jpg"> 
+                         <a href="#">Flya Fisher serving as Transports for noxious Little </a>
+                	</div>
+                </td>
+                <td>
+                   <div class="related_post">
+                          <img src="img/related_post.jpg"> 
+                          <a href="#">Flyb Fisher serving as Transports for noxious Little </a>
+                   </div>
+                 </td>
+                 <td>
+                     <div class="related_post">
+                           <img src="img/related_post.jpg"> 
+                           <a href="#">Flyc Fisher serving as Transports for noxious Little </a>
+                    </div>
+                </td>   
+               </tr>
+             </table>
+          </div> 
+              
+          <div class='whitespace small-4 large-4 columns'>     
+         <!-- For future usage e.g. advertisement space-->
+       	  </div>
+         
+                      <!-- More about related posts
+                      <div class="related large-9 columns">
+                            <div class="related_post">       
+                                <img src="img/related_post.jpg"> 
+                                <a href="#">Flya Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                            <div class="related_post">       
+                                <img src="img/related_post.jpg"> 
+                                <a href="#">Flya Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                            <div class="related_post">       
+                                <img src="img/related_post.jpg"> 
+                                <a href="#">Flya Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                       </div>
+                            <!--
+                            <div class="related_post small-3 large-3 columns">       
+                                <img src="img/related_post.jpg"> 
+                                <a href="#">Flyb Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                            
+                            <div class="related_post small-3 large-3 columns">         
+                                <img src="img/related_post.jpg"> 
+                                <a href="#">Flyc Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                            
+                         <!--   <div class="related_post">
+                                 <img src="img/related_post.jpg"> 
+                                 <a href="#">Fly Fisher serving as Transports for noxious Little Invaders</a>
+                            </div>
+                            <div class="related_post">
+                                <img src="img/related_post.jpg"> <a href="#">Fly Fisher serving as Transports for noxious 
+                                Little Invaders</a>
+                            </div>   -->
+    
+      	   <!-- User Form Submission-->
+           <div class="form small-8 large-8 columns">
+      		   <h5> Leave a Comment</h5>
+               
+               <!-- Horizontal rule image bar --> 
+               <div class="horizontal_bar_"></div>
+                   <form>
+                      <label>Name</label>
+                      <input type="text" placeholder="Orman Clark (On Focus)" max-length="30"/>
+                                 
+                       <label>Email</label>
+                       <input type="text" placeholder="orman.clark@honeybook.com" />
+                       
+                       <label>Comments</label>
+                       <input type="text-area"   /> 
+                          <a href="#" class="medium secondary button">Submit Comment</a>  
+                          <a href="#" class="medium secondary button">Reset</a> 
+                    </form>
+            </div>
+            
+         <div class='whitespace small-4 large-4 columns'>     
+         	<!-- For future usage e.g. advertisement space-->
+       	 </div>
+         
+         
+         <!-- Footer Styling-->
+      	 <div class="footer small-12 large-12 columns">
+      		<div class="footer_content small-12 large-12 columns">
+           			 <img src="img/honeybook_logo.png">
+                        <div id="container4">
+                            <div id="container3">
+                                <div id="container2">
+                                    <div id="container1">
+                                        <div id="col1">
+                                            <!-- Column one start -->
+                                            <h5>About</h5> 
+                                            ellus fermentum lorem libero, varius ornare est 
+                                            <a href="#">dictum</a> at. <p></p><p></p>Nullam porttitor 
+                  						    eros non congue laoreet. Sed eu vulputate nibh. Donec semper elementum 
+                                            elit at posuere. Sed luctus magna vel
+                                            <!-- Column one end -->
+                                        </div>
+                                        <div id="col2">
+                                            <!-- Column two start -->
+                                         	<h5>Twitter</h5>
+                                            at tempus <a href="#">sem</a> nisi eget tellus. 
+                                            <a href="#">Nullam</a> vel turpis nulla.<p></p> 
+                   						    <a href="#">Pellentesque</a> urna lacus, dignissim nec 
+                    						hendrerit cursus, aliquam consequat neque.<p></p> 
+                                           	<a href="#">Vestibulum</a> tempor odio justo, nec placerat nisl 
+                                            adipiscing quis.<p></p>Nullam aliquam facilisis.
+                                            <!-- Column two end -->
+                                        </div>
+                                        <div id="col3">
+                                            <!-- Column three start -->
+                                            <h5>Facebook</h5>
+                                            <a href="http://twitter.com/foundationzurb">
+                                            @Stewart_Honeybook</a><br />Ping us on Twitter if you have 
+                   							questions. <p></p>If you build something with this we'd love to see 
+                                            it (and send you a totally boss sticker).</p>
+                                            <!-- Column three end -->
+                                        </div>
+                                        <div id="col4">
+                                            <!-- Column four start -->
+                                             <img src="img/repro">
+                                            <!-- Column four end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+             </div>
+         </div>
+         
+         <!-- Copyright Styling-->
+      	 <div class="base small-12 large-12 columns"> 
+         	<div class="copyright">Copyright 2013 <a href="#">Honeybook</a>. All Rights Reserved</div>
+            <div class="design-by">Powered by <a href="#">Honeybook</a>. Theme designed by <a href="#">Stewart </a></div>
+         </div>
+         
+    </div> <!-- End of content container Div -->   
+</body>
+</html>

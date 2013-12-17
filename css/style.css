@@ -1,0 +1,692 @@
+/*
+self-Checklist for CSS 
+- To add media queries css script  [ ] 
+- To ensure elements scales. [ ] 
+- Attempt flexbox at least once; though it is rather outdated [ ] 
+- Attempt animation & transitions; animate the RSS feed icon [ ]
+- Attempt multi layer colors on the background [ ] 
+- Attempt an interesting font [ ]
+- Attempt to add responsiveness to breadcrumbs [ ]
+
+padding: 20px 2px 20px 2px;
+
+
+id uses "."
+class uses "#"
+*/
+
+/* Margin Reset */
+* {
+	margin: 0; padding: 0;
+}
+
+/*-------------------------------------------
+Flex kit codes here
+-------------------------------------------*/
+body, html {
+  height: 100%;
+}
+
+body{ 
+   display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+   display: -moz-box;      /* OLD: Firefox (buggy) */ 
+   display: -ms-flexbox;   /* MID: IE 10 */
+   display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+   display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */	
+   background-color: #eee;  
+} 
+
+/*---------------------------------------------
+Texture codes here for background overlays
+------------------------------------------------*/
+.texture,.texture-color {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; 
+} 
+
+.texture { 
+    background: #6DB3F2 url('../background/old_moon.png'); 
+    opacity: 0.5; }
+
+.texture-color { 
+    background-color: #302a2a;  }
+	
+/*----------------------------------------------
+Container for elements at the top of the page
+----------------------------------------------*/
+.top_header{    
+	width: 100%;
+	height: 3%; 
+	background-color: #302a2a;
+} 
+
+/*subscriptions inside the top container*/
+.top_left_subscribe{      
+	margin-top: 0.8em; 
+	padding-left:5%; 
+	width:32%; color: #565658;
+
+	font-size: 0.5em; font-style:italic;
+	/*border:solid 1px #FF0000;*/
+}
+.top_left_subscribe a:link, .top_left_subscribe a:visited {
+	font-size: 0.5em; color: #7a7675;  
+}
+.top_left_subscribe a:hover {
+    color: #a3a3a1; 
+}
+
+/*navigations located on top container*/ 
+.top_right_link{   
+	margin-top: 0.4em;  
+	width:68%;
+	color: #7a7675;   
+	padding-right: 5%;
+	/*border:solid 1px #FF0000; */
+	/*attempt to prevent overflowing  
+	white-space: nowrap;*/
+}
+.top_right_link ul {   
+	/* flushes the navigation 10% in page width away from the right*/   
+
+	/* use of flex box to keep item align right */
+	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+	
+   	-webkit-flex-direction: row;
+   	flex-direction: row;
+   	-webkit-justify-content: flex-end;
+   	justify-content: flex-end;
+	-webkit-flex-flow: row no-wrap; /* doesn't seems to work */
+	
+	/* vendor prefixes to take note off
+	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-webkit-flex-direction: row;
+  	-moz-flex-direction: row;
+  	-ms-flex-direction: row;
+  	flex-direction: row;
+  	-webkit-flex-flow: row no-wrap;
+  	-moz-flex-flow: row no-wrap;
+  	-ms-flex-flow: row no-wrap;
+  	flex-flow: row no-wrap;  
+  	margin: 0 auto;*/
+   
+    /* other styling such as fonts, and hiding list bullet points*/
+	list-style-type: none;
+	font-size: 0.5em; 
+	margin: 0px; 
+}
+.top_right_link ul li{ 
+	/* Some padding for spacing between items in list navigation*/
+	padding-right: 1em;
+	padding-left: 1em;
+	/*	display:inline;   - Replaced by flexbox*/
+}
+.top_right_link a{
+	color: #7a7675; 	
+}   
+.top_right_link a:link, 
+.top_right_link a:visited {
+	font-size: 0.5em;
+	color: #7a7675;  
+}
+.top_right_link a:hover {
+    color: #a3a3a1; 
+} 
+
+
+/*---------------------------------------------
+Container for main content
+------------------------------------------------*/
+.content_container{   
+	margin-top : 2.2%;
+	width: 100%;   
+	/*min-height : 100vh;*/
+	height: 2500px;
+	/*border:solid 1px #FF0000;*/
+	border: none;
+	background-color: #fafafa;
+} 
+
+/* Logo placeholder , to add animation transitions later*/
+.honeybook_logo{  
+	padding-left: 5%;
+	/*border:solid 1px #FF0000; */
+}
+
+/* styling for main navigation bar, use flexbox to control the properties of it*/
+.horizontal_bar{
+	padding : auto;  
+	display: -webkit-flex;
+  	display: -moz-flex;
+  	display: -ms-flex;
+  	display: -o-flex;
+  	display: flex;
+  	-webkit-flex-direction: row;
+  	-moz-flex-direction: row;
+  	-ms-flex-direction: row;
+  	flex-direction: row;
+  	-webkit-flex-flow: row no-wrap;
+  	-moz-flex-flow: row no-wrap;
+  	-ms-flex-flow: row no-wrap;
+  	flex-flow: row no-wrap; 
+   	-webkit-justify-content: center;
+   	justify-content: center;
+  	margin: 0 auto; 
+	
+	
+	border:solid 1px #FF0000;	
+}
+.horizontal_bar a{ 
+	padding:1em;
+	font-weight:bold; 
+	float:left;
+	background-color: #FBFBFB;
+	color: #555;
+	border-style: solid;
+ 	border-width: 1px;
+  	border-color: #d9d9d9;
+}
+.horizontal_bar a:hover{ 
+	background-color: white;	
+}
+.horizontal_bar a:first-child{
+	/*margin-left: 5%;*/
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.horizontal_bar a:last-child{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*---------------------------------------------
+Breadcrumbs navigation
+------------------------------------------------*/
+ .breadcrumb{
+	margin-top: 0.5em; 
+ 	padding-left: 5%; 
+	padding-bottom: 2%;  
+	height:0; 
+	color: #565658; 
+	width:60%;
+    border:solid 1px #FF0000;    
+}
+.breadcrumb a:link{ 
+	color: white;
+} 
+.breadcrumb a:link,
+.breadcrumb a:visited {
+	font-size: 0.8em;
+	color: #7a7675;
+}
+.breadcrumb a:hover {
+    color: #a3a3a1; 
+}
+.highlight_crumb{
+	background-color: #f5f5f5;	
+}
+
+/*---------------------------------------------
+Main search
+------------------------------------------------*/
+.main_search{ 
+ 	border: solid 1px #FF0000; 
+	padding-left: 0;
+	margin-top: 0.5em;     
+   	width: 40%;
+	height: 40px;
+}
+.main_search input[type=text]{ 
+	width: 370px;   
+}
+ 
+/*---------------------------------------------
+Article Title
+------------------------------------------------ */
+.article_title{   
+	padding-left: 5%;   
+/*	border: solid 1px blue;*/
+}
+.article_title h4{   
+	display: inline-block;
+	overflow: hidden; 
+	color: #333;	   
+	font-style: bold;
+	font-size: 1.4em;
+	padding-right: 18px;
+	margin-bottom: 0;
+}  
+/*---------------------------------------------
+RSS Subscribe
+------------------------------------------------ */
+.rss_subscribe{    
+	padding-left: 0; 
+	text-wrap: normal;
+	/*border: solid 1px #FF0000;    */
+} 
+.rss_subscribe h3{
+	margin-top:0em;
+	margin: 0em;
+	font-size: 1.2em;
+}
+.rss_subscribe h5{ 
+	padding-left: 2em;
+	font-size: 0.9em; 
+	padding-top: -20px;
+	margin: 0;
+}
+.rss_subscribe img{
+	margin-top: 2%;
+	padding-left: 0;
+	float:left;	
+} 
+.rss_subscribe :hover{ 
+	cursor: pointer;
+}
+/*---------------------------------------------
+Twitter Follow
+------------------------------------------------  */
+.twitter_follow{ 
+	padding-left: 0;
+	text-wrap: normal;
+	/*border: solid 1px #FF0000;    */
+}  
+.twitter_follow h3{
+	margin-top:0em;
+	margin: 0em;
+	font-size: 1.2em;
+}
+.twitter_follow h5{ 
+	padding-left: 2em;
+	font-size: 0.9em; 
+	padding-top: -20px;
+	margin: 0;
+}
+.twitter_follow img{
+	margin-top: 2%;
+	margin-right: 5px;
+	padding-left: 0em;
+	float:left;	
+} 
+.twitter_follow :hover{ 
+	cursor: pointer;
+}
+
+/*---------------------------------------------
+Horizontal Image Bar
+------------------------------------------------  */
+.horizontal_bar_ { 
+	background: url('../img/buffer_bar.gif');  
+	height: 5px;   
+	padding: 5px;
+}
+/*
+.horizontal_bar_2_short{ 
+	background: url('../img/buffer_bar2_short.gif') no-repeat;  
+	height: 5px;    
+	padding: 5px; 
+	float:left;
+}
+
+.horizontal_bar_2_long { 
+	background: url('../img/buffer_bar2_long.gif') no-repeat;  
+	height: 5px;   
+	padding: 5px;
+	float:right;
+}*/
+ 
+
+/*---------------------------------------------
+Entry Category Summary
+------------------------------------------------  */
+.entry_cat{
+	margin-top: 0.5em;
+	font-size: 0.7em;
+	font-style:italic; 
+	color: #565658; 
+}
+.entry_cat a:link,
+.entry_cat a:visited {
+	font-size: 1em;
+	color: #7a7675; 
+	/*padding: 20px 2px 20px 2px;*/
+}
+.entry_cat a:hover {
+    color: #a3a3a1; 
+}
+
+/*---------------------------------------------
+Entry Images
+------------------------------------------------  */
+.cover_image {
+	/*border: solid 1px blue;	*/
+}
+.cover_image img{
+	margin-top: 1%;
+	margin-left: 5%;    
+	border: 4px solid #c6c6c6;
+ 	border-radius: 7px;
+}
+ 
+.column1{
+	padding: 0;
+	/*border: solid 1px green;*/
+}
+.column1 img{
+	margin-left: 12%;
+	border: 1px solid #c6c6c6;   
+	opacity:1;
+	filter:alpha(opacity=100); /* IE8 or earlier*/
+}
+.column1 img:first-child{
+	margin-bottom: 5%;
+}
+.column1 img:hover{
+	opacity:0.5;
+	filter:alpha(opacitu=0.5); /* for IE8 or earlier*/	
+	cursor: pointer;
+} 
+.column2{ 
+	padding: 0;
+	/*border: solid 1px green;*/
+}
+.column2 img{
+	margin-left: 12%;
+	border: 1px solid #c6c6c6;   
+	opacity:1;
+	filter:alpha(opacity=100); /* IE8 or earlier*/
+}
+.column2 img:first-child{
+	margin-bottom: 5%;
+}
+.column2 img:hover{
+	opacity:0.5;
+	filter:alpha(opacitu=0.5); /* for IE8 or earlier*/	
+	cursor: pointer;
+}
+ 
+/*---------------------------------------------
+Main Entry Contents
+------------------------------------------------  */
+.main_entry{ 
+	height: auto;
+	padding-top: 1%;
+	padding-left: 5%;
+	/*border: solid 1px red;*/	
+	font-size: 0.8em; 
+	color: #919191; 
+	line-height: 1.5;
+}
+
+.main_entry p{ 
+	line-height: 3em;
+}
+
+.main_entry a:link,
+.main_entry a:visited {
+	font-size: 1em;
+	color: #ce7347;  
+}
+.main_entry a:hover {
+    text-decoration:underline;
+}
+.main_entry img{
+	border:solid 1px pink;
+	float: left;
+	margin-left: 0;
+	margin-right: 20px;
+	margin-bottom: 10px; 
+	width:60%;
+	height:auto;  
+
+}
+.whitespace{
+	margin-top: 0;
+	border: solid 1px blue;	
+	min-height: 110	px;
+}
+
+
+/*---------------------------------------------
+Block Quotes
+------------------------------------------------*/
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 12px;
+	font-style: italic;
+	width: 500px;
+	margin: auto;
+	padding: 0.25em 40px;
+	position: relative;
+	color: #7a7675;
+	border:none;
+}
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	color: #7a7a7a;
+}
+blockquote cite {
+	color: #999999;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+blockquote cite:before {
+	content: "\2014 \2009";
+} 
+
+/*---------------------------------------------
+Multi Columns
+------------------------------------------------*/
+.two_columns{
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	-column-count:2;
+}
+
+.three_columns{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	-column-count:3;
+}
+
+/*---------------------------------------------
+Author Section
+------------------------------------------------*/
+.author{  
+	font-size : 0.8em;
+	color: #919191; 
+	/*border: solid 3px pink;*/
+	padding-left: 5%;
+}
+.author h5{   
+	color:#cd6434;
+	font-size : 1em;	 
+	font-weight:bold; 
+}
+.author img{
+	margin:auto;
+	float:left;
+	padding: 3px;
+	margin-right: 10px; 
+	margin-bottom: 10px;  
+	border: 3px solid #919191; 
+	width:50px;
+	height:auto;
+}
+
+/*---------------------------------------------
+Related Posts
+------------------------------------------------*/
+.related{
+	padding-left: 5%;
+	border: 3px solid red;	
+	display: inline; 
+}
+.related a{
+	line-height: 0;
+	font-size: 0.8em;
+	color: #919191;	
+}
+.related img{
+	float: left;
+	padding-right: 2%;
+	width: 100px;
+	height: auto;
+}
+.related h3{
+	color:#cd6434;
+	font-size : 1em;	 
+	font-weight:bold;
+}
+.related_post a:link,
+.related_post a:visited { 
+	color: #7a7675; 
+}
+.related_post a:hover {
+    color: #cc6733; 
+}
+ 
+
+/*---------------------------------------------
+Forms Styling
+------------------------------------------------*/
+.form{
+	/*border: solid 2px red;*/
+	padding-left: 5%;	
+}
+.form h5{ 
+	font-weight: bold;
+	color:#cd6434;
+}
+ 
+input[type=text-area]{
+	width: 100%;
+	height: 300px;
+	margin-bottom: 10px;
+}
+
+
+/*---------------------------------------------
+Footer Styling
+------------------------------------------------*/
+.footer{  
+	background-color: #2f2929;
+	/*border: solid 3px green;*/
+	padding-bottom: 2%;
+}
+.footer_content img{
+	width: 200px;
+	height: auto;	
+} 
+
+/* Start of Column CSS */
+#container1, #container2, #container3, #container4{
+	float: left;
+	width: 100%;
+	position: relative;
+	color: #FFF;	
+}
+#container4 {
+	clear:left;  
+	overflow:hidden; 
+}
+#container3 {
+	clear:left;   
+	right:25%; 
+}
+#container2 {
+	clear:left;   
+	right:25%; 
+}
+#container1 { 
+	width:100%; 
+	right:25%; 
+}
+#col1 a:link, #col2 a:link, #col3 a:link,
+#col1 a:visited, #col2 a:visited, #col3 a:visited{
+	color: #FFF; 
+}
+
+#col1 a:hover, #col2 a:hover, #col3 a:hover{
+	color: pink; 
+}
+
+#col1 h5, #col2 h5, #col3 h5{
+	color: #b9b8b6;
+	margin:0; 
+}
+ 
+/* Text Deocrations with buffer bar patterns before and after H5*/
+#col1 h5:before, #col2 h5:before, #col3 h5:before{
+	content:url(../img/buffer_bar2_short.gif); 
+	height: 5px;    
+	padding: 5px;  
+} 
+#col1 h5:after, #col2 h5:after, #col3 h5:after{
+	content:url(../img/buffer_bar2_short.gif); 
+	height: 5px;  
+	width: 300px;  
+	padding: 5px;  
+} 
+ 
+#col1, #col2, #col3, #col4{
+	font-size: 0.8em; 
+	color: #787473; 
+	line-height: 1;	
+	
+	float:left;
+	width:21%;
+	position:relative;
+	overflow:hidden;
+}
+#col1 { left:77%; }
+#col2 { left:81%; }
+#col3 { left:85%; }
+#col4 { left:89%; } 
+
+/*---------------------------------------------
+Copyright Styling
+------------------------------------------------*/
+.base{  
+	/*border: solid 3px green;*/
+	background-color: #000;
+	padding-top : 1%;
+	padding-bottom: 1%;
+	font-size: 0.8em;
+	clear:both;
+} 
+.copyright{ 
+	float:left;	
+}
+.design-by{ 
+	float:right;	
+}
+.copyright, .design-by{
+	color:#8c8a8b;
+}
+.copyright a, .design-by a{
+	color: #c0c0c0;
+}
+.copyright a:hover, .design-by a:hover{	
+	color: pink;
+}
+ 	
+ 
